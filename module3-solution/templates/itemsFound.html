@@ -1,0 +1,23 @@
+<div class="items">
+	<table ng-if="itemsCtrl.found.length > 0" style="border: 1px solid gray">
+		<thead>
+		<tr>
+			<th>short name</th>
+			<th>name</th>
+			<th>description</th>
+			<th>&nbsp;</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="item in itemsCtrl.found">
+			<td>{{item.short_name}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td width="160px">
+				<button ng-click="itemsCtrl.onRemove({index: $index});">Don't want this one!</button>
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+</div>
